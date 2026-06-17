@@ -6,6 +6,31 @@ and Random Forest) on a labelled phishing dataset, serves predictions through a
 lightweight Python HTTP server, and ships with a clean, responsive web interface
 that includes model metrics and explainability (feature importances / SHAP).
 
+Paste a URL, hit **Predict**, and the app extracts URL-based signals, runs them
+through the trained Random Forest, and returns a **Safe / Phishing** verdict
+alongside the exact features used, a side-by-side model comparison, and an
+explanation of *why* the model decided what it did.
+
+## Preview
+
+The dashboard combines live prediction, a model-performance sidebar, explainable-AI
+panels, and a full metric breakdown on a single page.
+
+![Phishing Detection dashboard](images/dashboard.png)
+
+### Live URL analysis
+
+Enter any URL to get an instant verdict, the features extracted from it, and the
+raw row fed to the model.
+
+![URL prediction and extracted features](images/prediction.png)
+
+### Dark mode
+
+The interface ships with a built-in light/dark theme toggle.
+
+![Dashboard in dark mode](images/dashboard-dark.png)
+
 ## Features
 
 - **Four ML models compared** — Logistic Regression, KNN, SVM, and Random Forest,
@@ -32,6 +57,7 @@ that includes model metrics and explainability (feature importances / SHAP).
 ├── rf_model.pkl           # Cached trained Random Forest model
 ├── rf_meta.json           # Cached feature names and model accuracies
 ├── requirements.txt       # Python dependencies
+├── images/                # Screenshots used in this README
 └── Report and PPT/        # Project report (PDF/DOCX) and presentation
 ```
 
