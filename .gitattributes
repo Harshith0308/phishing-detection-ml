@@ -1,0 +1,6 @@
+# Keep the single-file web UI out of the GitHub language bar so the
+# repository is reported as the Python ML project it actually is.
+index.html linguist-detectable=false
+
+# Treat the dataset as data, not source code.
+phishing.csv linguist-detectable=false
