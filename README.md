@@ -1,5 +1,13 @@
 # Phishing Detection using Machine Learning
 
+[**▶ Live Demo — the trained model, running in your browser**](https://harshith0308.github.io/phishing-detection-ml/)
+
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-4_models_compared-F7931E?logo=scikitlearn&logoColor=white)
+![Random Forest](https://img.shields.io/badge/Random_Forest-96.6%25_accuracy-2ea043)
+![SHAP](https://img.shields.io/badge/explainability-SHAP_%2B_importances-8A2BE2)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 A machine learning web application that detects phishing websites from URL-based
 features. It trains and compares four classifiers (Logistic Regression, KNN, SVM,
 and Random Forest) on a labelled phishing dataset, serves predictions through a
@@ -10,6 +18,11 @@ Paste a URL, hit **Predict**, and the app extracts URL-based signals, runs them
 through the trained Random Forest, and returns a **Safe / Phishing** verdict
 alongside the exact features used, a side-by-side model comparison, and an
 explanation of *why* the model decided what it did.
+
+
+> **Live demo:** the exact Random Forest trained by `app.py` is exported tree-by-tree
+> and evaluated client-side on [GitHub Pages](https://harshith0308.github.io/phishing-detection-ml/) —
+> same features, same predictions, no server. (SHAP explanations need the local Python app.)
 
 ## Preview
 
