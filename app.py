@@ -172,6 +172,7 @@ META_CACHE = "rf_meta.json"
 models = {}
 accuracies = {}
 feature_names = []
+model_metrics = {}
 if os.path.exists(RF_CACHE) and os.path.exists(META_CACHE):
     try:
         with open(RF_CACHE, "rb") as f:
@@ -179,8 +180,8 @@ if os.path.exists(RF_CACHE) and os.path.exists(META_CACHE):
         with open(META_CACHE, "r", encoding="utf-8") as f:
             meta = json.load(f)
         feature_names = meta.get("feature_names", [])
-        accuracies = {}
-        models = {}
+        accuracies = meta.get("accuracies", {})
+        models = {"Random Forest": rf_model} if rf_model is not None else {}
     except Exception:
         models = {}
         accuracies = {}
