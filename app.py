@@ -17,7 +17,7 @@ from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import GridSearchCV
 
-PORT = 8000
+PORT = int(os.environ.get("PORT", 8000))
 
 _IPV4_RE = re.compile(r"^(\d{1,3}\.){3}\d{1,3}$")
 _IPV6_RE = re.compile(r"^[0-9a-f:]+$", re.IGNORECASE)
